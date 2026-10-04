@@ -1,0 +1,64 @@
+import random
+import time
+import os
+
+
+def clear():
+    os.system("cls" if os.name == "nt" else "clear")
+
+
+def heart_pop():
+    for _ in range(5):
+        clear()
+
+        print("\n" * 2)
+
+        print(" " * random.randint(2, 15) + "❤️")
+        print(" " * random.randint(5, 25) + "💕")
+        print(" " * random.randint(1, 20) + "💗")
+        print(" " * random.randint(8, 28) + "💖")
+
+        time.sleep(0.3)
+
+    clear()
+
+    print("\n❤️  💕  ❤️  💕  ❤️")
+    print()
+    print("        THANK YOU ❤️")
+    print()
+    print("❤️  💕  ❤️  💕  ❤️")
+    print()
+    print("🥺 Thank you for forgiving me ❤️")
+
+
+while True:
+
+    clear()
+
+    print("==============================")
+    print("       🥺 I'M SORRY ❤️")
+    print("==============================")
+    print()
+
+    answer = input("Kya tum mujhe maaf karoge? ❤️\n> ")
+
+    answer = answer.strip().lower()
+
+    if answer in [
+        "thik hai",
+        "theek hai",
+        "thik h",
+        "theek h",
+        "ok",
+        "okay",
+        "haan",
+        "ha"
+    ]:
+        heart_pop()
+        break
+
+    else:
+        print()
+        print("Please forgive me 🥺❤️")
+        print("I'm really sorry... 💔")
+        time.sleep(1.5)
